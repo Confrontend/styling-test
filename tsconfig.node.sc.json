@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["vite.config.sc.ts"],
+  "build": {
+    "outDir": "dist-sc",
+    "rollupOptions": {
+      "input": { "app": "index.sc.html" }
+    }
+  },
+  "server": {
+    "open": "index.sc.html"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["vite.config.linaria.ts"],
+  "build": {
+    "outDir": "dist-linaria",
+    "rollupOptions": {
+      "input": { "app": "index.linaria.html" }
+    }
+  },
+  "server": {
+    "open": "index.linaria.html"
+  }
+}
