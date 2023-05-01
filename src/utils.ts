@@ -1,18 +1,12 @@
-export const generateData = (): number[] => {
-  const data = [];
-  for (let i = 0; i < 10000; i++) {
-    data.push(Math.floor(Math.random() * 100));
+export const generateData = (total: number): number[] => {
+  const data: any = [];
+  for (let i = 0; i < total; i++) {
+    data.push(i + 10);
   }
   return data;
 };
 
-export const getRandomSize = () => Math.floor(Math.random() * 50) + 100;
-
-export const getRandomColor = () => {
-  const letters = "0123456789ABCDEF";
-  let color = "#";
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
+export const getRandomColor = (index: number) => {
+  const colors = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "brown", "gray", "black", "white", "cyan", "magenta", "teal", "olive", "navy", "maroon", "lime", "silver", "gold"];
+  return colors[index % colors.length];
 };

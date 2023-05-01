@@ -1,4 +1,5 @@
 // PerformanceMetricsTable.tsx
+import React from "react";
 import { useState, useEffect } from "react";
 import { Metric } from "web-vitals";
 import { onLCP, onFID, onCLS, onFCP } from "web-vitals";

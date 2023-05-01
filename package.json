@@ -4,12 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "prod": "yarn build && yarn preview",
-    "dev": "vite",
+    "prod:linaria": "yarn build:linaria && yarn preview:linaria",
+    "prod:sc": "yarn build:sc && yarn preview:sc",
+    "dev:sc": "vite --config tsconfig.node.sc.json",
+    "dev:linaria": "vite",
     "build:sc": "vite build --config tsconfig.node.sc.json",
-    "build:linaria": "vite build --config tsconfig.node.linaria.json",
+    "build:linaria": "vite build",
     "preview:sc": "vite preview --config tsconfig.node.sc.json",
-    "preview:linaria": "vite preview --config tsconfig.node.linaria.json",
+    "preview:linaria": "vite preview",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {

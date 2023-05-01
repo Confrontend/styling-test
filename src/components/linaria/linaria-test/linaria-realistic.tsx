@@ -1,7 +1,6 @@
 import React from "react";
 import { styled } from "@linaria/react";
-import { generateData, getRandomColor } from "../../utils";
-
+import { generateData, getRandomColor } from "../../../utils";
 
 
 const Container = styled.div`
@@ -23,8 +22,8 @@ const Item = styled.span<{ color: string }>`
   }
 `;
 
-const LinariaRealistic = () => {
-  const items = generateData();
+const LinariaRealistic = ({ total }: any) => {
+  const items = generateData(total);
   const color = "#ddccdd";
   const title = "LinariaRealistic";
 
@@ -36,7 +35,7 @@ const LinariaRealistic = () => {
     <Container>
       <Title>{title}</Title>
       {items.map((item, index) => (
-        <Item key={index} color={getRandomColor()}>
+        <Item key={index} color={getRandomColor(index)}>
           {item} <DynamicStyle>Dynamic style with color {color}</DynamicStyle>
         </Item>
       ))}

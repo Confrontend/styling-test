@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { generateData, getRandomColor } from "../../utils";
+import { generateData, getRandomColor } from "../../../utils";
+
 
 const Container = styled.div`
   display: flex;
@@ -21,8 +22,8 @@ const Item = styled.span<{ color: string }>`
   }
 `;
 
-const ScRealistic = () => {
-  const items = generateData();
+const ScRealistic = ({ total }: any) => {
+  const items = generateData(total);
   const color = "#ddccdd";
   const title = "ScRealistic";
 
@@ -34,7 +35,7 @@ const ScRealistic = () => {
     <Container>
       <Title>{title}</Title>
       {items.map((item, index) => (
-        <Item key={index} color={getRandomColor()}>
+        <Item key={index} color={getRandomColor(index)}>
           {item} <DynamicStyle>Dynamic style with color {color}</DynamicStyle>
         </Item>
       ))}
